@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .movie-card {
+            position: relative;
+            width: 700px;
+            height: 350px;
+            background: url('https://image-link-of-movie-background') no-repeat center center/cover;
+            border-radius: 10px;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .movie-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 0;
+        }
+
+        .movie-info {
+            position: relative;
+            z-index: 1;
+            max-width: 400px;
+        }
+
+        .movie-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .movie-duration, .movie-rating, .movie-description {
+            margin-bottom: 10px;
+        }
+
+        .movie-rating span {
+            font-size: 24px;
+            vertical-align: middle;
+        }
+
+        .star {
+            color: red;
+        }
+
+        .movie-description {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .watch-button {
+            padding: 10px 20px;
+            background-color: #000;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .watch-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-card">
+        <div class="movie-info">
+            <h2 class="movie-title">The Incredibles 2</h2>
+            <p class="movie-duration">92 min</p>
+            <div class="movie-rating">
+                <span>5</span>
+                <span class="star">★</span>
+            </div>
+            <p class="movie-description">
+                Helen is called on to lead a campaign to bring Supers back, while Bob navigates the day-to-day heroics of "normal" life at home with Violet, Dash and baby Jack-Jack – whose superpowers are about to be discovered.
+            </p>
+            <button class="watch-button">WATCH MOVIE</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.carousel-inner img {
+    height: 600px; 
+    object-fit: cover; 
+}
+
+.movie-search{
+    height: 100px;
+    display: flex;              /* Enable flexbox layout */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;                /* Full viewport height for centering */
+    position: relative;         
+}
+
+.search-input { 
+    margin-top: 20px;   
+    padding: 18px;              
+    width: 800px;               
+    border: 1px solid #ccc;     
+    border-radius: 4px;         
+    font-size: 16px;            
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.search-movie-list {
+    display: flex;
+    flex-direction: column; /* Stack search-movie items vertically */
+}
+
+.search-movie-item {
+    background-color: #fff; /* White background for each search-movie item */
+    padding: 15px; /* Padding inside search-movie item */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.search-movie-item:hover {
+    transform: scale(1.02); /* Scale up on hover */
+}
+
+.search-movie-title {
+    font-size: 18px; /* Title font size */
+    font-weight: bold; /* Bold title */
+    margin: 0 0 10px; /* Space below title */
+}
+
+.search-movie-description {
+    font-size: 14px; /* Description font size */
+    color: #555; /* Darker gray for description text */
+    margin: 0 0 10px; /* Space below description */
+}
+
+.search-movie-release,
+.search-movie-rating {
+    font-size: 12px; /* Smaller font size for details */
+    color: #777; /* Lighter gray for detail text */
+    display: block; /* Display on separate lines */
+}

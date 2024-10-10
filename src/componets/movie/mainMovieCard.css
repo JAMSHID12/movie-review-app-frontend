@@ -1,0 +1,68 @@
+.main-movie-card {
+    position: relative;
+    width: auto;
+    height: inherit;
+    background: url('https://image-link-of-main-movie-background') no-repeat center center/cover;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.main-movie-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
+.main-movie-info {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+}
+
+.main-movie-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.main-movie-duration, .main-movie-rating, .main-movie-description {
+    margin-bottom: 10px;
+}
+
+.main-movie-rating span {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.star {
+    color: red;
+}
+
+.main-movie-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.main-watch-button {
+    padding: 10px 20px;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-watch-button:hover {
+    background-color: #555;
+}
